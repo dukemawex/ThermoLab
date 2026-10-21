@@ -1,0 +1,32 @@
+name: Feature request
+description: Suggest a capability for ThermoLab.
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem would this solve?
+      description: Describe the engineering task you are trying to do.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed solution
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope and model impact
+      description: >
+        Would this change the underlying calculation model (for example adding
+        latent heat, pressure drop, or a derived shell-and-tube correction
+        factor) or only the presentation?
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checks
+      options:
+        - label: I searched existing issues for this
+          required: true

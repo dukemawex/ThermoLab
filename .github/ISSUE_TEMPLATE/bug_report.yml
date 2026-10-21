@@ -1,0 +1,54 @@
+name: Bug report
+description: Something in ThermoLab behaves incorrectly.
+labels: ["bug"]
+body:
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: Describe the incorrect behaviour.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect instead?
+    validations:
+      required: true
+  - type: textarea
+    id: inputs
+    attributes:
+      label: Input values
+      description: >
+        The input set that reproduces the problem (temperatures, U, flow rates,
+        specific heats, F, flow arrangement). If the bug is in the calculation
+        engine, the expected duty / LMTD / area would also help.
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: ThermoLab version or commit
+      placeholder: e.g. v1.0.0 or 1a2b3c4
+  - type: dropdown
+    id: environment
+    attributes:
+      label: Environment
+      options:
+        - Local dev server (npm run dev)
+        - GitHub Pages
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: browser
+    attributes:
+      label: Browser and OS
+      placeholder: e.g. Firefox 140 on Android 14
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checks
+      options:
+        - label: I searched existing issues for this
+          required: true
